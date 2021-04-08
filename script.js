@@ -52,23 +52,37 @@ function consoleLogItems() {
 function showItems() {
   console.log("showItems()");
   items.forEach((item) => {
-    var itemName = document.createElement("h2");
-    itemName.innerText = item.fields.item_name;
-    document.body.append(itemName);
-  });
-}
 
 // creating new div container
 // item info will go here
-var itemContainer = document.createElement("div");
-itemContainer.classList.add("item-container");
-document.querySelector(".contianer").append(itemContainer);
+    var itemContainer = document.createElement("div");
+    itemContainer.classList.add("item-container");
+    document.querySelector(".container").append(itemContainer); 
 
-// get category field from airtable
-// loop through array and each genre as
-// a class to the container
+    var itemImage = document.createElement("img");
+    itemImage.classList.add("item-image");
+    itemImage.src = item.fields.item_image[0].url;
+    itemContainer.append(itemImage);
 
-var itemCategory = item.fields.category;
-itemCategory.forEach(function(category) {
-  
-}) 
+    var itemCategory = item.fields.item_category;
+    itemCategory.forEach(function(category) {
+      itemContainer.classList.add(category)
+    })
+
+// add event listener
+    var filterFurniture = document.querySelector(".container");
+    filterFurniture.addEventListener("load", function() {
+
+      if (itemContainer.classList.contains("furniture")) {
+        itemContainer.style.display = "block";
+      } 
+
+    })
+
+
+    
+  });
+}
+
+
+

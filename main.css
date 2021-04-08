@@ -57,52 +57,56 @@ p {
     left: 1rem;
 }
 
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.furn {
+    height: 15rem;
+    width: 8rem;
+    border-radius: 50%;
+    margin:auto;
+    border: 2px solid #FF8CC3;
+    transform: rotate(30deg);
+}
+.kit {
+    height: 15rem;
+    width: 8rem;
+    border-radius: 50%;
+    margin:auto;
+    border: 2px solid #FF8CC3;
+    transform: rotate(30deg);
+}
+.misc {
+    height: 15rem;
+    width: 8rem;
+    border-radius: 50%;
+    margin:auto;
+    border: 2px solid #FF8CC3;
+    transform: rotate(30deg);
+}
+.link2 {
+    position: absolute;
+    width: 8rem;
+    height: 15rem;
+}
 
 .container {
     display: flex;
-    padding: 5rem;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: column wrap;
-}
-.furniture {
-    height: 10rem;
-    width: 6rem;
-    border: 2px solid#FF8CC3;
-    border-radius: 50%;
-    transform: rotate(30deg);
-}
-.furniture:hover {
-    background-image: url();
-    border: none;
 }
 
-.kitchen {
-    height: 10rem;
-    width: 6rem;
-    border: 2px solid#FF8CC3;
-    border-radius: 50%;
-    transform: rotate(30deg);
-}
-.kitchen:hover {
-    background-image: url();
-    border: none;
+.item-container {
+    height: 25rem;
+    width: 13rem;
 }
 
-.miscellaneous {
-    height: 10rem;
-    width: 6rem;
-    border: 2px solid#FF8CC3;
-    border-radius: 50%;
-    transform: rotate(30deg);
-}
-.miscellaneous:hover {
-    background-image: url();
-    border: none;
+.item-image {
+    width: 100%;
+    height: auto;
 }
 
-.link2 {
-    position: absolute;
-    height: 10rem;
-    width: 6rem;
+.item-image.active {
+    display: block;
 }
+
